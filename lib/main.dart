@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,5 +25,15 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text('Cashholder'),
         ),
+        body: Center(
+          child: RaisedButton(
+            child: Text('Sing in'),
+            onPressed: _signIn,
+          ),
+        ),
       );
+
+  void _signIn() async {
+    await FirebaseAuth.instance.signOut();
+  }
 }

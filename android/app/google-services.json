@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "158851456791",
+    "firebase_url": "https://cashholder-2d4c2.firebaseio.com",
+    "project_id": "cashholder-2d4c2",
+    "storage_bucket": "cashholder-2d4c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:158851456791:android:cef191c3f8df53c51ee152",
+        "android_client_info": {
+          "package_name": "ru.kvint.cashholder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "158851456791-g094or4v3cc2cnbn39ffe8t8qmtdta5g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByAyCNOtHSGP9qa79eXJ8gW8O3Cu7Eoig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "158851456791-g094or4v3cc2cnbn39ffe8t8qmtdta5g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
