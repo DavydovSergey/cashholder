@@ -1,39 +1,29 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:auto_route/auto_route.dart';
+import 'package:cashholder/presentation/bloc/auth_bloc.dart';
+import 'package:cashholder/sys/router.gr.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'sys/app_theme.dart';
+import 'sys/injection_container.dart';
 
 void main() {
-  runApp(MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  initInjector();
+
+  runApp(App());
 }
 
-class MyApp extends StatelessWidget {
+class App extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: Text('Cashholder'),
-        ),
-        body: Center(
-          child: RaisedButton(
-            child: Text('Sing in'),
-            onPressed: _signIn,
-          ),
+  Widget build(BuildContext context) => MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (context) => AuthBloc(firebaseAuth: sl())),
+        ],
+        child: MaterialApp(
+          title: 'Cashholder',
+          theme: appTheme,
+          builder: ExtendedNavigator<Router>(router: Router()),
         ),
       );
-
-  void _signIn() async {
-    await FirebaseAuth.instance.signOut();
-  }
 }
