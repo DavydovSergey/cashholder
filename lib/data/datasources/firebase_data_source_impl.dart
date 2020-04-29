@@ -1,5 +1,5 @@
 import 'package:cashholder/data/datasources/firebase_data_source.dart';
-import 'package:cashholder/domain/entities/currency.dart';
+import 'package:cashholder/domain/entities/currency_dict.dart';
 import 'package:cashholder/domain/entities/user.dart';
 import 'package:cashholder/errors/failure.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -43,9 +43,9 @@ class FirebaseDataSourceImpl implements FirebaseDataSource {
   }
 
   @override
-  Stream<List<Currency>> currencies() =>
+  Stream<List<CurrencyDict>> currencies() =>
       firestore.collection(CURRENCY_PATH).snapshots().map((snapshot) {
-        return snapshot.documents.map((doc) => Currency.fromJson(doc.data)).toList();
+        return snapshot.documents.map((doc) => CurrencyDict.fromJson(doc.data)).toList();
       });
 
   @override

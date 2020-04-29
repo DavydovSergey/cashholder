@@ -1,4 +1,4 @@
-import 'package:cashholder/domain/entities/currency.dart';
+import 'package:cashholder/domain/entities/currency_dict.dart';
 import 'package:cashholder/domain/repositories/cashholder_repository.dart';
 import 'package:cashholder/presentation/bloc/currency_bloc.dart';
 import 'package:cashholder/presentation/widgets/flag_icon_widget.dart';
@@ -69,7 +69,7 @@ class CurrencyScreen extends StatelessWidget {
         child: ListView.builder(
           itemCount: state.currency.length,
           itemBuilder: (context, index) {
-            Currency currency = state.currency[index];
+            CurrencyDict currency = state.currency[index];
 
             return ListTile(
               title: Text(currency.name),

@@ -1,4 +1,4 @@
-import 'package:cashholder/domain/entities/currency.dart';
+import 'package:cashholder/domain/entities/currency_dict.dart';
 import 'package:cashholder/domain/repositories/cashholder_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -32,13 +32,13 @@ class CurrencyBloc extends Bloc<CurrencyEvent, CurrencyState> {
 abstract class CurrencyEvent with _$CurrencyEvent {
   const factory CurrencyEvent.onLoading() = OnLoading;
 
-  const factory CurrencyEvent.onLoaded({@required List<Currency> currency}) = OnLoaded;
+  const factory CurrencyEvent.onLoaded({@required List<CurrencyDict> currency}) = OnLoaded;
 }
 
 @freezed
 abstract class CurrencyState with _$CurrencyState {
   factory CurrencyState({
     @Default(false) bool loading,
-    @Default([]) List<Currency> currency,
+    @Default([]) List<CurrencyDict> currency,
   }) = _CurrencyState;
 }

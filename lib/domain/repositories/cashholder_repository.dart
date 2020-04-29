@@ -1,4 +1,4 @@
-import 'package:cashholder/domain/entities/currency.dart';
+import 'package:cashholder/domain/entities/currency_dict.dart';
 import 'package:cashholder/domain/entities/user.dart';
 import 'package:cashholder/errors/failure.dart';
 import 'package:dartz/dartz.dart';
@@ -12,7 +12,7 @@ abstract class CashHolderRepository {
 
   Future<void> signOut();
 
-  Stream<List<Currency>> currencies();
+  Stream<List<CurrencyDict>> currencies();
 
   Future<Either<DownloadFailure, String>> getDownloadURL(String path);
 }

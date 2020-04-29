@@ -1,19 +1,19 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named
 
-part of 'currency.dart';
+part of 'currency_dict.dart';
 
 // **************************************************************************
 // FreezedGenerator
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-Currency _$CurrencyFromJson(Map<String, dynamic> json) {
+CurrencyDict _$CurrencyDictFromJson(Map<String, dynamic> json) {
   return _Currency.fromJson(json);
 }
 
-class _$CurrencyTearOff {
-  const _$CurrencyTearOff();
+class _$CurrencyDictTearOff {
+  const _$CurrencyDictTearOff();
 
   _Currency call(
       {@required String id,
@@ -30,30 +30,31 @@ class _$CurrencyTearOff {
 }
 
 // ignore: unused_element
-const $Currency = _$CurrencyTearOff();
+const $CurrencyDict = _$CurrencyDictTearOff();
 
-mixin _$Currency {
+mixin _$CurrencyDict {
   String get id;
   String get code;
   String get name;
   String get icon;
 
   Map<String, dynamic> toJson();
-  $CurrencyCopyWith<Currency> get copyWith;
+  $CurrencyDictCopyWith<CurrencyDict> get copyWith;
 }
 
-abstract class $CurrencyCopyWith<$Res> {
-  factory $CurrencyCopyWith(Currency value, $Res Function(Currency) then) =
-      _$CurrencyCopyWithImpl<$Res>;
+abstract class $CurrencyDictCopyWith<$Res> {
+  factory $CurrencyDictCopyWith(
+          CurrencyDict value, $Res Function(CurrencyDict) then) =
+      _$CurrencyDictCopyWithImpl<$Res>;
   $Res call({String id, String code, String name, String icon});
 }
 
-class _$CurrencyCopyWithImpl<$Res> implements $CurrencyCopyWith<$Res> {
-  _$CurrencyCopyWithImpl(this._value, this._then);
+class _$CurrencyDictCopyWithImpl<$Res> implements $CurrencyDictCopyWith<$Res> {
+  _$CurrencyDictCopyWithImpl(this._value, this._then);
 
-  final Currency _value;
+  final CurrencyDict _value;
   // ignore: unused_field
-  final $Res Function(Currency) _then;
+  final $Res Function(CurrencyDict) _then;
 
   @override
   $Res call({
@@ -71,14 +72,14 @@ class _$CurrencyCopyWithImpl<$Res> implements $CurrencyCopyWith<$Res> {
   }
 }
 
-abstract class _$CurrencyCopyWith<$Res> implements $CurrencyCopyWith<$Res> {
+abstract class _$CurrencyCopyWith<$Res> implements $CurrencyDictCopyWith<$Res> {
   factory _$CurrencyCopyWith(_Currency value, $Res Function(_Currency) then) =
       __$CurrencyCopyWithImpl<$Res>;
   @override
   $Res call({String id, String code, String name, String icon});
 }
 
-class __$CurrencyCopyWithImpl<$Res> extends _$CurrencyCopyWithImpl<$Res>
+class __$CurrencyCopyWithImpl<$Res> extends _$CurrencyDictCopyWithImpl<$Res>
     implements _$CurrencyCopyWith<$Res> {
   __$CurrencyCopyWithImpl(_Currency _value, $Res Function(_Currency) _then)
       : super(_value, (v) => _then(v as _Currency));
@@ -128,7 +129,7 @@ class _$_Currency implements _Currency {
 
   @override
   String toString() {
-    return 'Currency(id: $id, code: $code, name: $name, icon: $icon)';
+    return 'CurrencyDict(id: $id, code: $code, name: $name, icon: $icon)';
   }
 
   @override
@@ -163,7 +164,7 @@ class _$_Currency implements _Currency {
   }
 }
 
-abstract class _Currency implements Currency {
+abstract class _Currency implements CurrencyDict {
   const factory _Currency(
       {@required String id,
       @required String code,

@@ -16,7 +16,7 @@ class _$CurrencyEventTearOff {
     return const OnLoading();
   }
 
-  OnLoaded onLoaded({@required List<Currency> currency}) {
+  OnLoaded onLoaded({@required List<CurrencyDict> currency}) {
     return OnLoaded(
       currency: currency,
     );
@@ -30,12 +30,12 @@ mixin _$CurrencyEvent {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result onLoading(),
-    @required Result onLoaded(List<Currency> currency),
+    @required Result onLoaded(List<CurrencyDict> currency),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result onLoading(),
-    Result onLoaded(List<Currency> currency),
+    Result onLoaded(List<CurrencyDict> currency),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -100,7 +100,7 @@ class _$OnLoading implements OnLoading {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result onLoading(),
-    @required Result onLoaded(List<Currency> currency),
+    @required Result onLoaded(List<CurrencyDict> currency),
   }) {
     assert(onLoading != null);
     assert(onLoaded != null);
@@ -111,7 +111,7 @@ class _$OnLoading implements OnLoading {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result onLoading(),
-    Result onLoaded(List<Currency> currency),
+    Result onLoaded(List<CurrencyDict> currency),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -154,7 +154,7 @@ abstract class OnLoading implements CurrencyEvent {
 abstract class $OnLoadedCopyWith<$Res> {
   factory $OnLoadedCopyWith(OnLoaded value, $Res Function(OnLoaded) then) =
       _$OnLoadedCopyWithImpl<$Res>;
-  $Res call({List<Currency> currency});
+  $Res call({List<CurrencyDict> currency});
 }
 
 class _$OnLoadedCopyWithImpl<$Res> extends _$CurrencyEventCopyWithImpl<$Res>
@@ -170,8 +170,9 @@ class _$OnLoadedCopyWithImpl<$Res> extends _$CurrencyEventCopyWithImpl<$Res>
     Object currency = freezed,
   }) {
     return _then(OnLoaded(
-      currency:
-          currency == freezed ? _value.currency : currency as List<Currency>,
+      currency: currency == freezed
+          ? _value.currency
+          : currency as List<CurrencyDict>,
     ));
   }
 }
@@ -180,7 +181,7 @@ class _$OnLoaded implements OnLoaded {
   const _$OnLoaded({@required this.currency}) : assert(currency != null);
 
   @override
-  final List<Currency> currency;
+  final List<CurrencyDict> currency;
 
   @override
   String toString() {
@@ -208,7 +209,7 @@ class _$OnLoaded implements OnLoaded {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required Result onLoading(),
-    @required Result onLoaded(List<Currency> currency),
+    @required Result onLoaded(List<CurrencyDict> currency),
   }) {
     assert(onLoading != null);
     assert(onLoaded != null);
@@ -219,7 +220,7 @@ class _$OnLoaded implements OnLoaded {
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
     Result onLoading(),
-    Result onLoaded(List<Currency> currency),
+    Result onLoaded(List<CurrencyDict> currency),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -256,9 +257,9 @@ class _$OnLoaded implements OnLoaded {
 }
 
 abstract class OnLoaded implements CurrencyEvent {
-  const factory OnLoaded({@required List<Currency> currency}) = _$OnLoaded;
+  const factory OnLoaded({@required List<CurrencyDict> currency}) = _$OnLoaded;
 
-  List<Currency> get currency;
+  List<CurrencyDict> get currency;
   $OnLoadedCopyWith<OnLoaded> get copyWith;
 }
 
@@ -266,7 +267,7 @@ class _$CurrencyStateTearOff {
   const _$CurrencyStateTearOff();
 
   _CurrencyState call(
-      {bool loading = false, List<Currency> currency = const []}) {
+      {bool loading = false, List<CurrencyDict> currency = const []}) {
     return _CurrencyState(
       loading: loading,
       currency: currency,
@@ -279,7 +280,7 @@ const $CurrencyState = _$CurrencyStateTearOff();
 
 mixin _$CurrencyState {
   bool get loading;
-  List<Currency> get currency;
+  List<CurrencyDict> get currency;
 
   $CurrencyStateCopyWith<CurrencyState> get copyWith;
 }
@@ -288,7 +289,7 @@ abstract class $CurrencyStateCopyWith<$Res> {
   factory $CurrencyStateCopyWith(
           CurrencyState value, $Res Function(CurrencyState) then) =
       _$CurrencyStateCopyWithImpl<$Res>;
-  $Res call({bool loading, List<Currency> currency});
+  $Res call({bool loading, List<CurrencyDict> currency});
 }
 
 class _$CurrencyStateCopyWithImpl<$Res>
@@ -306,8 +307,9 @@ class _$CurrencyStateCopyWithImpl<$Res>
   }) {
     return _then(_value.copyWith(
       loading: loading == freezed ? _value.loading : loading as bool,
-      currency:
-          currency == freezed ? _value.currency : currency as List<Currency>,
+      currency: currency == freezed
+          ? _value.currency
+          : currency as List<CurrencyDict>,
     ));
   }
 }
@@ -318,7 +320,7 @@ abstract class _$CurrencyStateCopyWith<$Res>
           _CurrencyState value, $Res Function(_CurrencyState) then) =
       __$CurrencyStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool loading, List<Currency> currency});
+  $Res call({bool loading, List<CurrencyDict> currency});
 }
 
 class __$CurrencyStateCopyWithImpl<$Res>
@@ -338,8 +340,9 @@ class __$CurrencyStateCopyWithImpl<$Res>
   }) {
     return _then(_CurrencyState(
       loading: loading == freezed ? _value.loading : loading as bool,
-      currency:
-          currency == freezed ? _value.currency : currency as List<Currency>,
+      currency: currency == freezed
+          ? _value.currency
+          : currency as List<CurrencyDict>,
     ));
   }
 }
@@ -354,7 +357,7 @@ class _$_CurrencyState implements _CurrencyState {
   final bool loading;
   @JsonKey(defaultValue: const [])
   @override
-  final List<Currency> currency;
+  final List<CurrencyDict> currency;
 
   @override
   String toString() {
@@ -385,13 +388,13 @@ class _$_CurrencyState implements _CurrencyState {
 }
 
 abstract class _CurrencyState implements CurrencyState {
-  factory _CurrencyState({bool loading, List<Currency> currency}) =
+  factory _CurrencyState({bool loading, List<CurrencyDict> currency}) =
       _$_CurrencyState;
 
   @override
   bool get loading;
   @override
-  List<Currency> get currency;
+  List<CurrencyDict> get currency;
   @override
   _$CurrencyStateCopyWith<_CurrencyState> get copyWith;
 }

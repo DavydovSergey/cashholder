@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'currency.dart';
+part of 'currency_dict.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator

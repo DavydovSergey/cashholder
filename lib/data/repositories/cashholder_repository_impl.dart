@@ -1,5 +1,5 @@
 import 'package:cashholder/data/datasources/firebase_data_source.dart';
-import 'package:cashholder/domain/entities/currency.dart';
+import 'package:cashholder/domain/entities/currency_dict.dart';
 import 'package:cashholder/domain/entities/user.dart';
 import 'package:cashholder/domain/repositories/cashholder_repository.dart';
 import 'package:cashholder/errors/failure.dart';
@@ -25,7 +25,7 @@ class CashHolderRepositoryImpl implements CashHolderRepository {
       );
 
   @override
-  Stream<List<Currency>> currencies() => firebaseDataSource.currencies();
+  Stream<List<CurrencyDict>> currencies() => firebaseDataSource.currencies();
 
   @override
   Future<Either<DownloadFailure, String>> getDownloadURL(String path) => firebaseDataSource.getDownloadURL(path);
