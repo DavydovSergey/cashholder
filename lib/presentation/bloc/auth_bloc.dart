@@ -14,8 +14,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
 
   AuthBloc({@required this.firebaseAuth}) {
     firebaseAuth.onAuthStateChanged.listen((user) {
-      this.add(
-          user == null ? OnSignOut() : OnSignIn(user: User(uid: user.uid)));
+      this.add(user == null ? OnSignOut() : OnSignIn(user: User(uid: user.uid)));
     });
   }
 

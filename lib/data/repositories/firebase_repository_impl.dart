@@ -1,4 +1,5 @@
 import 'package:cashholder/data/datasources/firebase_data_source.dart';
+import 'package:cashholder/domain/entities/currency.dart';
 import 'package:cashholder/domain/entities/user.dart';
 import 'package:cashholder/domain/repositories/firebase_repository.dart';
 import 'package:cashholder/errors/failure.dart';
@@ -22,4 +23,10 @@ class FirebaseRepositoryImpl implements FirebaseRepository {
         email: email,
         password: password,
       );
+
+  @override
+  Stream<List<Currency>> currencies() => firebaseDataSource.currencies();
+
+  @override
+  Future<Either<DownloadFailure, String>> getDownloadURL(String path) => firebaseDataSource.getDownloadURL(path);
 }

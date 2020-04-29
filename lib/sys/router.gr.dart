@@ -11,12 +11,14 @@ import 'package:cashholder/presentation/pages/start_page.dart';
 import 'package:cashholder/presentation/pages/home_page.dart';
 import 'package:cashholder/presentation/pages/auth_page.dart';
 import 'package:cashholder/presentation/pages/loading_page.dart';
+import 'package:cashholder/presentation/pages/currency_page.dart';
 
 abstract class Routes {
   static const startPage = '/';
   static const homePage = '/home-page';
   static const authPage = '/auth-page';
   static const loadingPage = '/loading-page';
+  static const currencyPage = '/currency-page';
 }
 
 class Router extends RouterBase {
@@ -31,22 +33,27 @@ class Router extends RouterBase {
     switch (settings.name) {
       case Routes.startPage:
         return MaterialPageRoute<dynamic>(
-          builder: (_) => StartPage(),
+          builder: (context) => StartPage(),
           settings: settings,
         );
       case Routes.homePage:
         return MaterialPageRoute<dynamic>(
-          builder: (_) => HomePage(),
+          builder: (context) => HomePage(),
           settings: settings,
         );
       case Routes.authPage:
         return MaterialPageRoute<dynamic>(
-          builder: (_) => AuthPage(),
+          builder: (context) => AuthPage(),
           settings: settings,
         );
       case Routes.loadingPage:
         return MaterialPageRoute<dynamic>(
-          builder: (_) => LoadingPage(),
+          builder: (context) => LoadingPage(),
+          settings: settings,
+        );
+      case Routes.currencyPage:
+        return MaterialPageRoute<dynamic>(
+          builder: (context) => CurrencyPage(),
           settings: settings,
         );
       default:

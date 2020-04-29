@@ -30,6 +30,13 @@
             {
               "client_id": "158851456791-g094or4v3cc2cnbn39ffe8t8qmtdta5g.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "158851456791-ic7suonpjs7jvs0uqlfs5kho2tifq5k4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "ru.kvint.cashholder"
+              }
             }
           ]
         }

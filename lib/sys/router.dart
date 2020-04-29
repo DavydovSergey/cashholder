@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route_annotations.dart';
 import 'package:cashholder/presentation/pages/auth_page.dart';
+import 'package:cashholder/presentation/pages/currency_page.dart';
 import 'package:cashholder/presentation/pages/home_page.dart';
 import 'package:cashholder/presentation/pages/loading_page.dart';
 import 'package:cashholder/presentation/pages/start_page.dart';
@@ -15,4 +16,6 @@ class $Router {
   AuthPage authPage;
 
   LoadingPage loadingPage;
+
+  CurrencyPage currencyPage;
 }

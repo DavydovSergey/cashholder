@@ -8,6 +8,7 @@ part of 'user.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
 User _$UserFromJson(Map<String, dynamic> json) {
   return _User.fromJson(json);
 }
@@ -30,12 +31,13 @@ mixin _$User {
   String get uid;
 
   Map<String, dynamic> toJson();
+
   $UserCopyWith<User> get copyWith;
 }
 
 abstract class $UserCopyWith<$Res> {
-  factory $UserCopyWith(User value, $Res Function(User) then) =
-      _$UserCopyWithImpl<$Res>;
+  factory $UserCopyWith(User value, $Res Function(User) then) = _$UserCopyWithImpl<$Res>;
+
   $Res call({@JsonKey(name: 'uid') String uid});
 }
 
@@ -43,6 +45,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   _$UserCopyWithImpl(this._value, this._then);
 
   final User _value;
+
   // ignore: unused_field
   final $Res Function(User) _then;
 
@@ -57,14 +60,13 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
 }
 
 abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
-  factory _$UserCopyWith(_User value, $Res Function(_User) then) =
-      __$UserCopyWithImpl<$Res>;
+  factory _$UserCopyWith(_User value, $Res Function(_User) then) = __$UserCopyWithImpl<$Res>;
+
   @override
   $Res call({@JsonKey(name: 'uid') String uid});
 }
 
-class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
-    implements _$UserCopyWith<$Res> {
+class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res> implements _$UserCopyWith<$Res> {
   __$UserCopyWithImpl(_User _value, $Res Function(_User) _then)
       : super(_value, (v) => _then(v as _User));
 
@@ -83,11 +85,9 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
 @JsonSerializable()
 class _$_User implements _User {
-  const _$_User({@required @JsonKey(name: 'uid') this.uid})
-      : assert(uid != null);
+  const _$_User({@required @JsonKey(name: 'uid') this.uid}) : assert(uid != null);
 
-  factory _$_User.fromJson(Map<String, dynamic> json) =>
-      _$_$_UserFromJson(json);
+  factory _$_User.fromJson(Map<String, dynamic> json) => _$_$_UserFromJson(json);
 
   @override
   @JsonKey(name: 'uid')
@@ -102,17 +102,14 @@ class _$_User implements _User {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _User &&
-            (identical(other.uid, uid) ||
-                const DeepCollectionEquality().equals(other.uid, uid)));
+            (identical(other.uid, uid) || const DeepCollectionEquality().equals(other.uid, uid)));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(uid);
+  int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(uid);
 
   @override
-  _$UserCopyWith<_User> get copyWith =>
-      __$UserCopyWithImpl<_User>(this, _$identity);
+  _$UserCopyWith<_User> get copyWith => __$UserCopyWithImpl<_User>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -128,6 +125,7 @@ abstract class _User implements User {
   @override
   @JsonKey(name: 'uid')
   String get uid;
+
   @override
   _$UserCopyWith<_User> get copyWith;
 }

@@ -1,3 +1,4 @@
+import 'package:cashholder/domain/entities/currency.dart';
 import 'package:cashholder/domain/entities/user.dart';
 import 'package:cashholder/errors/failure.dart';
 import 'package:dartz/dartz.dart';
@@ -10,4 +11,8 @@ abstract class FirebaseDataSource {
   });
 
   Future<void> signOut();
+
+  Stream<List<Currency>> currencies();
+
+  Future<Either<DownloadFailure, String>> getDownloadURL(String path);
 }
