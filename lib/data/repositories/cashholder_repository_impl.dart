@@ -1,15 +1,15 @@
 import 'package:cashholder/data/datasources/firebase_data_source.dart';
 import 'package:cashholder/domain/entities/currency.dart';
 import 'package:cashholder/domain/entities/user.dart';
-import 'package:cashholder/domain/repositories/firebase_repository.dart';
+import 'package:cashholder/domain/repositories/cashholder_repository.dart';
 import 'package:cashholder/errors/failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/foundation.dart';
 
-class FirebaseRepositoryImpl implements FirebaseRepository {
+class CashHolderRepositoryImpl implements CashHolderRepository {
   final FirebaseDataSource firebaseDataSource;
 
-  FirebaseRepositoryImpl({@required this.firebaseDataSource});
+  CashHolderRepositoryImpl({@required this.firebaseDataSource});
 
   @override
   Future<void> signOut() async => await firebaseDataSource.signOut();

@@ -1,11 +1,11 @@
-import 'package:cashholder/domain/repositories/firebase_repository.dart';
+import 'package:cashholder/domain/repositories/cashholder_repository.dart';
 import 'package:cashholder/errors/failure.dart';
 import 'package:cashholder/presentation/widgets/loading.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 
 class FlagIconWidget extends StatelessWidget {
-  final FirebaseRepository repository;
+  final CashHolderRepository repository;
   final String path;
 
   const FlagIconWidget({

@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bloc/bloc.dart';
-import 'package:cashholder/domain/repositories/firebase_repository.dart';
+import 'package:cashholder/domain/repositories/cashholder_repository.dart';
 import 'package:cashholder/sys/utils.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -10,7 +10,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'auth_form_bloc.freezed.dart';
 
 class AuthFormBloc extends Bloc<AuthFormEvent, AuthFormState> {
-  final FirebaseRepository firebaseRepository;
+  final CashHolderRepository firebaseRepository;
 
   AuthFormBloc({@required this.firebaseRepository});
 

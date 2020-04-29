@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:cashholder/domain/repositories/firebase_repository.dart';
+import 'package:cashholder/domain/repositories/cashholder_repository.dart';
 import 'package:flutter/material.dart';
 
 import '../../sys/injection_container.dart';
@@ -34,5 +34,5 @@ class _HomePageState extends State<HomePage> {
         ),
       );
 
-  void _signOut() async => await sl<FirebaseRepository>().signOut();
+  void _signOut() async => await sl<CashHolderRepository>().signOut();
 }

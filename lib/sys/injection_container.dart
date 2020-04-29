@@ -1,7 +1,7 @@
 import 'package:cashholder/data/datasources/firebase_data_source.dart';
 import 'package:cashholder/data/datasources/firebase_data_source_impl.dart';
-import 'package:cashholder/data/repositories/firebase_repository_impl.dart';
-import 'package:cashholder/domain/repositories/firebase_repository.dart';
+import 'package:cashholder/data/repositories/cashholder_repository_impl.dart';
+import 'package:cashholder/domain/repositories/cashholder_repository.dart';
 import 'package:cashholder/presentation/bloc/auth_bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -20,8 +20,8 @@ Future<void> initInjector() async {
         firestore: sl(),
         firebaseStorage: sl(),
       ));
-  sl.registerLazySingleton<FirebaseRepository>(
-      () => FirebaseRepositoryImpl(firebaseDataSource: sl()));
+  sl.registerLazySingleton<CashHolderRepository>(
+      () => CashHolderRepositoryImpl(firebaseDataSource: sl()));
 
   //bloc
   sl.registerLazySingleton<AuthBloc>(() => AuthBloc(firebaseAuth: sl()));

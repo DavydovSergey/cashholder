@@ -1,12 +1,12 @@
 import 'package:cashholder/domain/entities/currency.dart';
-import 'package:cashholder/domain/repositories/firebase_repository.dart';
+import 'package:cashholder/domain/repositories/cashholder_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'currency_bloc.freezed.dart';
 
 class CurrencyBloc extends Bloc<CurrencyEvent, CurrencyState> {
-  final FirebaseRepository firebaseRepository;
+  final CashHolderRepository firebaseRepository;
 
   CurrencyBloc({@required this.firebaseRepository});
 

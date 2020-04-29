@@ -1,5 +1,5 @@
 import 'package:cashholder/domain/entities/currency.dart';
-import 'package:cashholder/domain/repositories/firebase_repository.dart';
+import 'package:cashholder/domain/repositories/cashholder_repository.dart';
 import 'package:cashholder/presentation/bloc/currency_bloc.dart';
 import 'package:cashholder/presentation/widgets/flag_icon_widget.dart';
 import 'package:cashholder/presentation/widgets/loading.dart';
@@ -28,7 +28,7 @@ class CurrencyBody extends StatefulWidget {
 
 class _CurrencyBodyState extends State<CurrencyBody> {
   CurrencyBloc _currencyBloc;
-  FirebaseRepository _repository;
+  CashHolderRepository _repository;
 
   @override
   void initState() {
@@ -56,7 +56,7 @@ class _CurrencyBodyState extends State<CurrencyBody> {
 
 class CurrencyScreen extends StatelessWidget {
   final CurrencyState state;
-  final FirebaseRepository repository;
+  final CashHolderRepository repository;
 
   const CurrencyScreen({
     @required this.state,
